@@ -11,11 +11,11 @@
  * bundled with this package in the LICENSE file.
  *
  * @package    Support
- * @version    2.0.3
+ * @version    2.0.1
  * @author     Cartalyst LLC
  * @license    BSD License (3-clause)
- * @copyright  (c) 2011-2019, Cartalyst LLC
- * @link       https://cartalyst.com
+ * @copyright  (c) 2011-2017, Cartalyst LLC
+ * @link       http://cartalyst.com
  */
 
 namespace Cartalyst\Support\Tests;
@@ -96,8 +96,8 @@ class ValidatorTest extends PHPUnit_Framework_TestCase
     public function it_can_get_and_set_the_custom_attributes()
     {
         $this->validator->setCustomAttributes([
-            'first_name' => 'First Name',
-            'last_name'  => 'Last Name'
+            'firstName' => 'First Name',
+            'lastName'  => 'Last Name'
         ]);
         $this->assertCount(2, $this->validator->getCustomAttributes());
 
