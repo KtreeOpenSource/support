@@ -96,8 +96,8 @@ class ValidatorTest extends PHPUnit_Framework_TestCase
     public function it_can_get_and_set_the_custom_attributes()
     {
         $this->validator->setCustomAttributes([
-            'first_name' => 'First Name',
-            'last_name'  => 'Last Name'
+            'firstName' => 'First Name',
+            'lastName'  => 'Last Name'
         ]);
         $this->assertCount(2, $this->validator->getCustomAttributes());
 

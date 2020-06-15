@@ -28,9 +28,10 @@ trait RepositoryTrait
      * @param  array  $data
      * @return mixed
      */
-    public function createModel(array $data = [])
+    public function createModel(array $data = [], $model = null)
     {
-        $class = '\\'.ltrim($this->model, '\\');
+        $model = (isset($model) && $model) ? $model : $this->model;
+        $class = '\\'.ltrim($model, '\\');
 
         return new $class($data);
     }
